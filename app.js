@@ -5,6 +5,9 @@
 const yargs = require('yargs')
 const geocode = require('./geocode')
 const argv = yargs
+const request = require('request')
+const url = "https://maps.googleapis.com/maps/api/geocode/json?address=Aldrinhof 5 3402DC IJsselstein"
+
     .options({
      s: {
          demand: true,
@@ -24,8 +27,18 @@ const argv = yargs
     .alias('help', 'h')
     .argv
 
-console.log(JSON.stringify(argv.s))
+var source = (JSON.stringify(argv.s))
+var destination = (JSON.stringify(argv.d))
+console.log('Source address: ' + source)
+console.log('Destination address: ' + destination)
 
-
+request({url: url}, function (error, response, body) {
+    if (error) {
+        console.log('Prutser!')
+    }
+    else {
+        console.log(body)
+    }
+})
 
 
