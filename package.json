@@ -1,0 +1,24 @@
+{
+  "name": "traffic-info-comandline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferryvanmaurik/traffic-info-comandline.git"
+  },
+  "author": "Ferry van Maurik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ferryvanmaurik/traffic-info-comandline/issues"
+  },
+  "homepage": "https://github.com/ferryvanmaurik/traffic-info-comandline#readme",
+  "dependencies": {
+    "@google/maps": "^0.4.5",
+    "request": "^2.83.0",
+    "yargs": "^10.0.3"
+  }
+}
